@@ -1,0 +1,47 @@
+// Font Variables
+
+$merri: 'Merriweather', serif;
+$roboto: 'Roboto', sans-serif;
+$rale: 'Raleway', sans-serif;
+$lato: 'Lato', sans-serif;
+
+// Colors for first log in
+$background-0: linear-gradient(#fff, #428bca);
+
+$primary: #428bca;
+$secondary: lighten($primary, 30%);
+$light: #9e9e9e;
+$error: #ff2d26;
+$progress-height: 10px;
+
+// Mobile Queries
+
+@mixin mediaSm {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) and (max-width: 1499px) {
+    @content;
+  }
+}
+
+@mixin mediaXxl {
+  @media screen and (min-width: 1500px) {
+    @content;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "log-in",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "log": "node-sass -w scss/ -o src/css/ --recursive”"
+  },
+  "author": "David Salazar",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
