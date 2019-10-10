@@ -32,7 +32,6 @@ $(function() {
   })
     .setPin('#pinContainer')
     .setTween(wipeAnimation)
-    .addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 });
 
@@ -242,7 +241,7 @@ function formComplete() {
 
 // Second Page of login
 
-// My Crappy JS Skills :/
+// My Crappy jQuery Skills :/
 
 $('.sign-up').on('click', function() {
   $('.button').addClass('expanded');

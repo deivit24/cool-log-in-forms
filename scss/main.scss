@@ -685,11 +685,391 @@ body {
     }
   }
   .log-3 {
-    background: yellow;
+    background: url('../img/tennis.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     z-index: 3;
+    font-family: $lato;
+    $color_1: rgba(255, 255, 255, 0.4);
+    $color_2: #fff;
+    $background_color_1: rgba(10, 10, 10, 0.68);
+    $background_color_2: rgb(220, 20, 60);
+    $background_color_3: rgb(200, 20, 60);
+    $background_color_4: rgb(190, 20, 60);
+
+    @-webkit-keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    .login {
+      max-width: 280px;
+      min-height: 500px;
+      margin: 30px auto;
+      background-color: $background_color_1;
+    }
+    .login-icon-field {
+      height: 250px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-icon {
+      width: 150px;
+      animation: rotation 8s infinite linear;
+    }
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    .login-form {
+      padding: 8px 20px 20px;
+      height: 120px;
+      width: 100%;
+    }
+
+    .username-row {
+      position: relative;
+      height: 40px;
+      border-bottom: 1px solid white;
+      margin-bottom: 10px;
+    }
+    .password-row {
+      position: relative;
+      height: 40px;
+      border-bottom: 1px solid white;
+    }
+    .password-icon {
+      margin: 5px;
+      .key-path {
+        fill: rgba(255, 255, 255, 0);
+        stroke: #fff;
+        stroke-width: 3.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        -webkit-animation: dash 3s 0.3s linear forwards;
+        animation: dash 3s 0.3s linear forwards;
+      }
+    }
+    .user-icon {
+      margin: 5px;
+      .user-path {
+        fill: rgba(255, 255, 255, 0);
+        stroke: #fff;
+        stroke-width: 3.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        -webkit-animation: dash 3s 0.3s linear forwards;
+        animation: dash 3s 0.3s linear forwards;
+        -webkit-animation: dash 3s 0.8s linear forwards;
+        animation: dash 3s 0.8s linear forwards;
+      }
+    }
+    input {
+      position: absolute;
+      width: 195px;
+      height: 30px;
+      margin: 5px 50px;
+      background: transparent;
+      border: none;
+      color: white;
+      &:focus {
+        outline: none;
+      }
+      &::-webkit-input-placeholder {
+        color: $color_1;
+      }
+      &::-moz-placeholder {
+        color: $color_1;
+      }
+    }
+    button {
+      &:focus {
+        outline: none;
+      }
+      display: block;
+      width: 240px;
+      height: 40px;
+      padding: 0;
+      margin: 10px 20px 10px;
+      font-weight: 700;
+      color: $color_2;
+      background-color: $background_color_2;
+      border: none;
+      border-radius: 20px;
+      transition: background-color 0.1s ease-in-out;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      &:hover {
+        background-color: $background_color_3;
+      }
+      &:active {
+        background-color: $background_color_4;
+      }
+    }
+    .call-to-action {
+      margin: 22px 0;
+      height: 130px;
+      width: 100%;
+    }
+    p {
+      display: inline-block;
+      width: 200px;
+      margin: 0 40px;
+      font-size: 0.8rem;
+      color: $color_1;
+      a {
+        color: $color_2;
+        &:hover {
+          -webkit-cursor: pointer;
+          cursor: pointer;
+        }
+      }
+    }
+    label {
+      -webkit-cursor: pointer;
+      cursor: pointer;
+    }
   }
   .log-4 {
-    background: red;
+    background: url('../img/bank2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
     z-index: 4;
+    font-family: $open;
+    padding: 0px;
+    @include mediaSm {
+      background-position: center;
+      form#login-form {
+        width: 320px !important;
+        height: 620px !important;
+
+        div.left {
+          width: 100% !important;
+          float: top !important;
+          padding: 0px 15px !important;
+          label {
+            display: none;
+          }
+
+          input[type='email'] {
+            border: 0.1em solid darken(#eee, 6%);
+            padding: 0.5em;
+            margin: 0px 0;
+            width: 100%;
+            border-radius: (0.2em);
+            box-shadow: (0 0 0.2em rgba(darken(#eee, 6%), 0.2));
+            transition: (0.15s all ease-in-out);
+
+            &:focus {
+              outline: none;
+              border: 0.1em solid darken(#ccc, 6%);
+            }
+          }
+          input[type='password'] {
+            border: 0.1em solid darken(#eee, 6%);
+            padding: 0.5em;
+            margin: 0px 0px 20px 0px;
+            width: 100%;
+            border-radius: (0.2em);
+            box-shadow: (0 0 0.2em rgba(darken(#eee, 6%), 0.2));
+            transition: (0.15s all ease-in-out);
+
+            &:focus {
+              outline: none;
+              border: 0.1em solid darken(#ccc, 6%);
+            }
+          }
+
+          input[type='submit'] {
+            background: #428bca;
+            color: #fff;
+            outline: none;
+            text-transform: uppercase;
+            padding: 0.5em;
+            overflow: hidden;
+            border: none;
+            letter-spacing: 0.1em;
+            margin: 5px 0px;
+            width: 100%;
+            font-weight: bold;
+
+            border-radius: (0.4em);
+            transition: (0.15s all ease-in-out);
+
+            &:hover {
+              background: rgba(#f85f64, 0.8);
+            }
+          }
+        }
+
+        div.right {
+          width: 100% !important;
+          float: bottom !important;
+          padding: 0em 1.5em 2.5em 0em;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          box-sizing: (border-box);
+          a {
+            padding: 5px;
+            margin: 5px;
+            width: 100%;
+          }
+        }
+      }
+    }
+    form#login-form {
+      background: #fff;
+      width: 600px;
+      margin: 2em auto;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1),
+        0 6px 10px 5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+      border-radius: (0.3em);
+
+      div.heading {
+        background: #428bca;
+        color: #fff;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1.5em;
+      }
+
+      div.left {
+        width: 50%;
+        float: left;
+        padding: 1.7em 1.5em 2.5em 1.5em;
+
+        box-sizing: (border-box);
+      }
+
+      div.right {
+        width: 50%;
+        float: right;
+        padding: 1.7em 1.5em 2.5em 1.5em;
+
+        box-sizing: (border-box);
+      }
+    }
+
+    div.left {
+      label {
+        display: inline-block;
+        color: gray;
+        font-size: 1.1em;
+        margin-top: 0.6em;
+      }
+
+      input[type='email'],
+      input[type='password'] {
+        border: 0.1em solid darken(#eee, 6%);
+        padding: 1em;
+        margin: 0.6em 0;
+
+        border-radius: (0.2em);
+        box-shadow: (0 0 0.2em rgba(darken(#eee, 6%), 0.2));
+        transition: (0.15s all ease-in-out);
+
+        &:focus {
+          outline: none;
+          border: 0.1em solid darken(#ccc, 6%);
+        }
+      }
+
+      input[type='submit'] {
+        background: #428bca;
+        color: #fff;
+        outline: none;
+        text-transform: uppercase;
+        padding: 1.2em;
+        overflow: hidden;
+        border: none;
+        letter-spacing: 0.1em;
+        margin: 0.5em 0;
+        font-weight: bold;
+
+        border-radius: (0.4em);
+        transition: (0.15s all ease-in-out);
+
+        &:hover {
+          background: rgba(#f85f64, 0.8);
+        }
+      }
+    }
+
+    div.right {
+      div.connect {
+        color: gray;
+        font-size: 1.1em;
+        text-align: center;
+      }
+
+      a {
+        display: inline-block;
+        font-size: 1.5em;
+        text-decoration: none;
+        color: white;
+        width: 9em;
+        padding: 0.55em 0.3em;
+        clear: both;
+        text-align: center;
+        margin: 0.5em 0.1em;
+
+        border-radius: (0.3em);
+      }
+
+      a.facebook {
+        background: #3a589a;
+        margin-top: 0.8em;
+        transition: (0.15s all ease-in-out);
+
+        &:hover {
+          background: rgba(#3a589a, 0.8);
+        }
+      }
+
+      a.twitter {
+        background: #4099ff;
+        transition: (0.15s all ease-in-out);
+
+        &:hover {
+          background: rgba(#4099ff, 0.8);
+        }
+      }
+
+      a.google-plus {
+        background: #e9544f;
+        transition: (0.15s all ease-in-out);
+
+        &:hover {
+          background: rgba(#e9544f, 0.8);
+        }
+      }
+    }
   }
 }
